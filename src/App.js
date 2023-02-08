@@ -1,7 +1,7 @@
 // import ExpenseItem from "./components/ExpenseItem";
 import React from "react";
-import Expenses from "./components/Expenses";
-function App() {
+import Expenses from "./components/Expenses/Expenses";
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -36,17 +36,20 @@ function App() {
     },
   ];
 
-  // return (
-  //   <div className="App">
+  return (
+    <div className="App">
 
-  //         <Expenses item={expenses} />
-  //   </div>
-  // );
-  return React.createElement("div",
-   {}, 
-   React.createElement("h2", {}, "Let's get started"),
-   React.createElement(Expenses, {item: expenses})
-   );
+          <Expenses item={expenses} />
+    </div>
+  );
+
+
+  // new way is tari ke se bhi ho sakta hai
+  // return React.createElement("div",
+  //  {}, 
+  //  React.createElement("h2", {}, "Let's get started"),
+  //  React.createElement(Expenses, {item: expenses})
+  //  );
 }
 
 export default App;
